@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <h1>
+    <%= locals.title %>
+  </h1>
+  <p>
+    Messages
+  </p>
+  <% locals.messages.map((message)=> { %>
+    <p>
+      <%= message.user %>: <%= message.text %>: <%= message.added %>
+    </p>
+    <% }) %>
+      <a href="/new">Add message</a>
+</body>
+
+</html>
